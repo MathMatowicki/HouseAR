@@ -16,7 +16,6 @@ export default function TabOneScreen() {
   const [data, setData] = useState<WeatherForecast[]>([]);
 
   useEffect(() => {
-    // Replace 'https://localhost:5001/api/weatherforecast' with your Minimal API endpoint
     axios
       .get<WeatherForecast[]>("http://localhost:5113/WeatherForecast")
       .then((response: AxiosResponse<WeatherForecast[]>) => {
@@ -26,13 +25,13 @@ export default function TabOneScreen() {
         console.error(error);
       });
   }, []);
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Weather Forecast:</Text>
       {data.map((forecast, index) => (
         <Text key={index}>{`${forecast.date}: ${forecast.summary}`}</Text>
       ))}
-
       <Text>{data.every((d) => d.date)}</Text>
       <View
         style={styles.separator}
