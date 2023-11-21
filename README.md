@@ -29,20 +29,20 @@ The project is structured to exhibit a seamless communication between the React 
 
     ```bash
     git clone https://github.com/your-username/ARReactNative.git
-    cd ARReactNative
+    cd HouseAR
     ```
 
 2. **Run the .NET Core API:**
 
     ```bash
-    cd ARReactNative
+    cd back
     dotnet run
     ```
 
 3. **Run the React Native App:**
 
     ```bash
-    cd ReactNativeApp
+    cd front
     npx react-native run-android
     ```
 
@@ -55,10 +55,9 @@ The project is structured to exhibit a seamless communication between the React 
 
 ## Dependencies
 
-- .NET Core 3.1 or later
+- .NET Core 7 or later
 - Node.js
 - React Native CLI
-- Other dependencies...
 
 ## Contributing
 
