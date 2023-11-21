@@ -1,4 +1,4 @@
-# ARReactNative Project
+# HouseAR Project
 
 ARReactNative is a demonstration project that combines the power of React Native for mobile app development and .NET Core for the backend API. The goal is to showcase the integration of these technologies to create an augmented reality (AR) application.
 
