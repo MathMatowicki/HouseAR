@@ -62,6 +62,11 @@ The project is structured to exhibit a seamless communication between the React 
 
 Feel free to contribute to the project by opening issues or pull requests.
 
+## Discord
+
+Join our discord channel.
+https://discord.gg/6gdMMghV
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
