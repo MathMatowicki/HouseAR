@@ -8,14 +8,12 @@ The project is structured to exhibit a seamless communication between the React 
 
 ## Project Structure
 
-- **ARReactNative**
+- **Backend .NET**
   - `House.cs`: Definition of the `House` class representing AR houses.
   - `Program.cs`: Entry point for the .NET Core application.
   - `HouseController.cs`: REST API controller for handling AR house generation commands.
-  - `HouseCommand.cs`: Command model for generating AR houses.
-  - `HouseCommandHandler.cs`: Command handler for generating AR houses.
-- **ReactNativeApp**
-  - `App.tsx`: React Native app component for displaying AR house information.
+  
+- **Frontend React-Native**
 
 ## Features
 
