@@ -1,5 +1,3 @@
-using System;
-
 namespace ARReactNative.Models
 {
     public class House
