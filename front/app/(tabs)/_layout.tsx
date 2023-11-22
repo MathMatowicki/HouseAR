@@ -1,12 +1,11 @@
 import FontAwesome from '@expo/vector-icons/FontAwesome';
-import { Link, Tabs } from 'expo-router';
+import React from 'react';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { Link } from 'expo-router';
 import { Pressable, useColorScheme } from 'react-native';
-
 import Colors from '../../constants/Colors';
+import Login from '../../components/login';
 
-/**
- * You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
- */
 function TabBarIcon(props: {
   name: React.ComponentProps<typeof FontAwesome>['name'];
   color: string;
@@ -14,16 +13,20 @@ function TabBarIcon(props: {
   return <FontAwesome size={28} style={{ marginBottom: -3 }} {...props} />;
 }
 
+const Tab = createBottomTabNavigator();
+
 export default function TabLayout() {
   const colorScheme = useColorScheme();
 
   return (
-    <Tabs
+    <Tab.Navigator
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-      }}>
-      <Tabs.Screen
+      }}
+    >
+      <Tab.Screen
         name="index"
+        component={() => null}
         options={{
           title: 'Tab One',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
@@ -43,13 +46,22 @@ export default function TabLayout() {
           ),
         }}
       />
-      <Tabs.Screen
+      <Tab.Screen
         name="two"
+        component={() => null}
         options={{
           title: 'Tab Two',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
         }}
       />
-    </Tabs>
+      <Tab.Screen
+        name="Login"
+        component={Login}
+        options={{
+          title: 'Login',
+          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+        }}
+      />
+    </Tab.Navigator>
   );
 }
